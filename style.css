@@ -35,6 +35,12 @@ body {
   text-align: center;
   text-emphasis-color: blue;
 }
+.addAPIData {
+  background-color: rgb(174, 213, 213);
+}
+.addAPIDataHeader {
+  background-color: rgb(174, 213, 213);
+}
 .close-modal {
   position: absolute;
   top: 1.2rem;

@@ -9,20 +9,7 @@ const ApiData = document.querySelector(".addAPIData");
 // console.log("b");
 let joke;
 
-// btnJoke.addEventListener("click", function () {
-//   fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data))
-//     .then((data) => printy(data.value));
-// });
-
-// // init(url);
-// function printy(str) {
-//   console.log(str);
-// }
-
-//new approach
-btnJoke.addEventListener("click", function () {
+function apiCall() {
   fetch(url)
     .then((response) => {
       return response.json();
@@ -35,10 +22,14 @@ btnJoke.addEventListener("click", function () {
     .catch(function () {
       console.log("Error detected");
     });
-
+}
+apiCall();
+//new approach
+btnJoke.addEventListener("click", function () {
   modalWindow.classList.remove("hidden");
 });
 
 closeBtn.addEventListener("click", function () {
+  apiCall();
   modalWindow.classList.add("hidden");
 });
